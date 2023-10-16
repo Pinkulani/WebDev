@@ -1,0 +1,35 @@
+<html>
+	<head>
+		<title>Title</title>
+		<meta charset="UTF-8">
+		<meta name="author" content="Emilia">
+	</head>
+	<script>
+	function Function() {
+		let Input = document.getElementById("Input").value;
+		let Dollar = Math.floor(Input / 100);
+		Input = Input % 100;
+		let Quater = Math.floor(Input / 25);
+		Input = Input % 25;
+		let Dime = Math.floor(Input / 10);
+		Input = Input % 10;
+		let Nickel = Math.floor(Input / 5);
+		Input = Input % 5;
+		let Cent = Input;
+		document.getElementById("Dollar").innerHTML = Dollar;
+		document.getElementById("Quater").innerHTML = Quater;
+		document.getElementById("Dime").innerHTML = Dime;
+		document.getElementById("Nickel").innerHTML = Nickel;
+		document.getElementById("Cent").innerHTML = Cent;
+	}
+	</script>
+	<body>
+		<input id="Input" placeholder="Cent"></input>
+		<button onclick="Function()">Calculate</button>
+		<p>Dollar: <span id="Dollar"></span></p>
+		<p>Quater: <span id="Quater"></span></p>
+		<p>Dime: <span id="Dime"></span></p>
+		<p>Nickel: <span id="Nickel"></span></p>
+		<p>Cent: <span id="Cent"></span></p>
+	</body>
+</html>
